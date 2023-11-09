@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="colorFondo">#82898d</color>
+    <color name="cuadradoGrid">#82898d</color>
+    <color name="colorGrid">#3c3f41</color>
 </resources>
