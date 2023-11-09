@@ -31,6 +31,22 @@ private lateinit var d3: CardView
 private lateinit var d4: CardView
 
 /**
+ * BOTONES DEL PAD DE NUMEROS
+ */
+private lateinit var btnNum1: Button
+private lateinit var btnNum2: Button
+private lateinit var btnNum3: Button
+private lateinit var btnNum4: Button
+private lateinit var btnNum5: Button
+private lateinit var btnNum6: Button
+private lateinit var btnNum7: Button
+private lateinit var btnNum8: Button
+private lateinit var btnNum9: Button
+private lateinit var btnZero: Button
+
+
+
+/**
  *  TEXTVIEW DE CADA CUADRADO
  */
 private lateinit var a1Text: TextView
@@ -49,11 +65,6 @@ private lateinit var d1Text: TextView
 private lateinit var d2Text: TextView
 private lateinit var d3Text: TextView
 private lateinit var d4Text: TextView
-
-private lateinit var etNum: EditText
-
-private lateinit var btnAdd: Button
-
 
 
 
@@ -116,9 +127,47 @@ class MainActivity : AppCompatActivity() {
             selectSquare(d4, d4Text)
         }
 
-        btnAdd.setOnClickListener{
-            textSelector(tvSelected, cvSelected)
+        btnNum1.setOnClickListener{
+            tvSelected!!.text = btnNum1.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
         }
+        btnNum2.setOnClickListener{
+            tvSelected!!.text = btnNum2.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum3.setOnClickListener{
+            tvSelected!!.text = btnNum3.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum4.setOnClickListener{
+            tvSelected!!.text = btnNum4.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum5.setOnClickListener{
+            tvSelected!!.text = btnNum5.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum6.setOnClickListener{
+            tvSelected!!.text = btnNum6.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum7.setOnClickListener{
+            tvSelected!!.text = btnNum7.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum8.setOnClickListener{
+            tvSelected!!.text = btnNum8.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnNum9.setOnClickListener{
+            tvSelected!!.text = btnNum9.text.toString()
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+        btnZero.setOnClickListener{
+            tvSelected!!.text = ""
+            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+        }
+
     }
 
     private fun initComponents(){
@@ -159,8 +208,18 @@ class MainActivity : AppCompatActivity() {
         d3Text = findViewById(R.id.d3Text)
         d4Text = findViewById(R.id.d4Text)
 
-        etNum = findViewById(R.id.etNum)
-        btnAdd = findViewById(R.id.btnAdd)
+        //BOTONES DE NUMEROS
+        btnNum1 = findViewById(R.id.btnNum1)
+        btnNum2 = findViewById(R.id.btnNum2)
+        btnNum3 = findViewById(R.id.btnNum3)
+        btnNum4 = findViewById(R.id.btnNum4)
+        btnNum5 = findViewById(R.id.btnNum5)
+        btnNum6 = findViewById(R.id.btnNum6)
+        btnNum7 = findViewById(R.id.btnNum7)
+        btnNum8 = findViewById(R.id.btnNum8)
+        btnNum9 = findViewById(R.id.btnNum9)
+        btnZero = findViewById(R.id.btnzero)
+
     }
 
     /**
@@ -175,8 +234,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun textSelector(tv: TextView?, cv: CardView?){
-        val textToSet = etNum.text.toString()
-        tv!!.text = textToSet
+
+        //val textToSet = etNum.text.toString()
+        //if (isValid(textToSet)) tv!!.text = textToSet
+
         cv!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+    }
+
+    /**
+     * Método al que si se le pasa una string, en caso de ser número devuelve true, en caso contrario
+     * maneja la excepción y devuelve false.
+     *
+     * @param num numero a comprobar
+     * @return true: Si es un numero, false: si no es un número
+     */
+    private fun isValid(num:String): Boolean{
+        return try{
+            num.toDouble()
+            true
+        }catch (e: NumberFormatException){
+            false
+        }
     }
 }
