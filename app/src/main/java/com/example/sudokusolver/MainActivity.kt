@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 
 
-var cvSelected: CardView? = null
-var tvSelected: TextView? = null
+private lateinit var cvSelected: CardView
+private lateinit var tvSelected: TextView
 /**
  *  CADA UNO DE LOS CUADRADOS DEL SUDOKU
  */
@@ -79,98 +79,115 @@ class MainActivity : AppCompatActivity() {
 
     private fun initListeners(){
         a1.setOnClickListener{
+            cardDeselector()
             selectSquare(a1, a1Text)
         }
         a2.setOnClickListener{
+            cardDeselector()
             selectSquare(a2, a2Text)
         }
         a3.setOnClickListener{
+            cardDeselector()
             selectSquare(a3, a3Text)
         }
         a4.setOnClickListener{
+            cardDeselector()
             selectSquare(a4, a4Text)
         }
         b1.setOnClickListener{
+            cardDeselector()
             selectSquare(b1, b1Text)
         }
         b2.setOnClickListener{
+            cardDeselector()
             selectSquare(b2, b2Text)
         }
         b3.setOnClickListener{
+            cardDeselector()
             selectSquare(b3, b3Text)
         }
         b4.setOnClickListener{
+            cardDeselector()
             selectSquare(b4, b4Text)
         }
         c1.setOnClickListener{
+            cardDeselector()
             selectSquare(c1, c1Text)
         }
         c2.setOnClickListener{
+            cardDeselector()
             selectSquare(c2, c2Text)
         }
         c3.setOnClickListener{
+            cardDeselector()
             selectSquare(c3, c3Text)
         }
         c4.setOnClickListener{
+            cardDeselector()
             selectSquare(c4, c4Text)
         }
         d1.setOnClickListener{
+            cardDeselector()
             selectSquare(d1, d1Text)
         }
         d2.setOnClickListener{
+            cardDeselector()
             selectSquare(d2, d2Text)
         }
         d3.setOnClickListener{
+            cardDeselector()
             selectSquare(d3, d3Text)
         }
         d4.setOnClickListener{
+            cardDeselector()
             selectSquare(d4, d4Text)
         }
 
         btnNum1.setOnClickListener{
             tvSelected!!.text = btnNum1.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum2.setOnClickListener{
             tvSelected!!.text = btnNum2.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum3.setOnClickListener{
             tvSelected!!.text = btnNum3.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum4.setOnClickListener{
             tvSelected!!.text = btnNum4.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum5.setOnClickListener{
             tvSelected!!.text = btnNum5.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum6.setOnClickListener{
             tvSelected!!.text = btnNum6.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum7.setOnClickListener{
             tvSelected!!.text = btnNum7.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum8.setOnClickListener{
             tvSelected!!.text = btnNum8.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnNum9.setOnClickListener{
             tvSelected!!.text = btnNum9.text.toString()
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
         btnZero.setOnClickListener{
             tvSelected!!.text = ""
-            cvSelected!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+            cardDeselector()
         }
 
     }
 
     private fun initComponents(){
+
 
         // CARDVIEWS
         a1 = findViewById(R.id.a1)
@@ -220,10 +237,12 @@ class MainActivity : AppCompatActivity() {
         btnNum9 = findViewById(R.id.btnNum9)
         btnZero = findViewById(R.id.btnzero)
 
+        cvSelected = a1
+        tvSelected = a1Text
     }
 
     /**
-     * Función que selecciona un cuadrado del sudoku
+     * Selecciona un cuadrado del sudoku
      * @param cv cuadrado a seleccionar
      */
     private fun selectSquare(cv: CardView, tv: TextView){
@@ -233,12 +252,27 @@ class MainActivity : AppCompatActivity() {
         tvSelected = tv
     }
 
-    private fun textSelector(tv: TextView?, cv: CardView?){
-
-        //val textToSet = etNum.text.toString()
-        //if (isValid(textToSet)) tv!!.text = textToSet
-
-        cv!!.setCardBackgroundColor(getColor(R.color.colorFondo))
+    /**
+     * Elimina la selección de todos los cuadrados y devuelve el color de fondo
+     */
+    private fun cardDeselector(){
+        a1.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        a2.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        a3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        a4.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        b1.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        b2.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        b3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        b4.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        a1.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        d1.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        d2.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        d3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        d4.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        c1.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        c2.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        c3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
+        c4.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
     }
 
     /**
