@@ -316,7 +316,7 @@
         android:layout_marginTop="30dp"/>
 
     <EditText
-        android:id="@+id/editTxtNum"
+        android:id="@+id/etNum"
         android:layout_width="50sp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/btnSolve"
@@ -330,7 +330,7 @@
         android:text="@string/btnAdd"
         android:backgroundTint="@color/colorGrid"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtNum"
+        app:layout_constraintTop_toBottomOf="@+id/etNum"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="30dp"/>

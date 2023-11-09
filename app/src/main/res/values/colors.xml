@@ -11,4 +11,5 @@
     <color name="colorFondo">#82898d</color>
     <color name="cuadradoGrid">#82898d</color>
     <color name="colorGrid">#3c3f41</color>
+    <color name="colorSelected">#52575a</color>
 </resources>
