@@ -346,25 +346,26 @@
         android:layout_width="218.75dp"
         android:layout_height="218.75dp"
         android:layout_marginTop="20dp"
-        android:columnCount="3"
-        android:rowCount="3"
+        android:columnCount="2"
+        android:rowCount="2"
         app:layout_constraintStart_toStartOf="@+id/crdGrid"
         app:layout_constraintTop_toBottomOf="@+id/crdGrid">
 
         <Button
             android:id="@+id/btnNum1"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_row="0"
             android:layout_column="0"
             android:backgroundTint="@color/colorSelected"
             android:text="@string/one"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"/>
 
         <Button
             android:id="@+id/btnNum2"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_row="0"
             android:layout_column="1"
             android:backgroundTint="@color/colorSelected"
@@ -373,85 +374,38 @@
 
         <Button
             android:id="@+id/btnNum3"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
-            android:layout_row="0"
-            android:layout_column="2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_row="1"
+            android:layout_column="0"
             android:backgroundTint="@color/colorSelected"
             android:text="@string/three"
             android:textColor="@color/white" />
 
         <Button
             android:id="@+id/btnNum4"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_row="1"
-            android:layout_column="0"
+            android:layout_column="1"
             android:backgroundTint="@color/colorSelected"
             android:text="@string/four"
             android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/btnNum5"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
-            android:layout_row="1"
-            android:layout_column="01"
-            android:backgroundTint="@color/colorSelected"
-            android:text="@string/five"
-            android:textColor="@color/white" />
 
-        <Button
-            android:id="@+id/btnNum6"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:backgroundTint="@color/colorSelected"
-            android:text="@string/six"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/btnNum7"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:backgroundTint="@color/colorSelected"
-            android:text="@string/seven"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/btnNum8"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:backgroundTint="@color/colorSelected"
-            android:text="@string/eight"
-            android:textColor="@color/white" />
-
-        <Button
-            android:id="@+id/btnNum9"
-            android:layout_width="72.91dp"
-            android:layout_height="72.91dp"
-            android:layout_row="2"
-            android:layout_column="2"
-            android:backgroundTint="@color/colorSelected"
-            android:text="@string/nine"
-            android:textColor="@color/white" />
 
 
     </GridLayout>
 
     <Button
         android:id="@+id/btnzero"
-        android:layout_width="wrap_content"
-        android:layout_height="72.91dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:backgroundTint="@color/colorSelected"
         android:text="@string/zero"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/gridNums"
+        android:layout_marginBottom="18dp"
         app:layout_constraintEnd_toEndOf="@id/crdGrid"
         app:layout_constraintStart_toEndOf="@id/gridNums" />
 

@@ -38,11 +38,6 @@ private lateinit var btnNum1: Button
 private lateinit var btnNum2: Button
 private lateinit var btnNum3: Button
 private lateinit var btnNum4: Button
-private lateinit var btnNum5: Button
-private lateinit var btnNum6: Button
-private lateinit var btnNum7: Button
-private lateinit var btnNum8: Button
-private lateinit var btnNum9: Button
 private lateinit var btnZero: Button
 
 
@@ -158,26 +153,6 @@ class MainActivity : AppCompatActivity() {
             tvSelected!!.text = btnNum4.text.toString()
             cardDeselector()
         }
-        btnNum5.setOnClickListener {
-            tvSelected!!.text = btnNum5.text.toString()
-            cardDeselector()
-        }
-        btnNum6.setOnClickListener {
-            tvSelected!!.text = btnNum6.text.toString()
-            cardDeselector()
-        }
-        btnNum7.setOnClickListener {
-            tvSelected!!.text = btnNum7.text.toString()
-            cardDeselector()
-        }
-        btnNum8.setOnClickListener {
-            tvSelected!!.text = btnNum8.text.toString()
-            cardDeselector()
-        }
-        btnNum9.setOnClickListener {
-            tvSelected!!.text = btnNum9.text.toString()
-            cardDeselector()
-        }
         btnZero.setOnClickListener {
             tvSelected!!.text = ""
             cardDeselector()
@@ -229,11 +204,6 @@ class MainActivity : AppCompatActivity() {
         btnNum2 = findViewById(R.id.btnNum2)
         btnNum3 = findViewById(R.id.btnNum3)
         btnNum4 = findViewById(R.id.btnNum4)
-        btnNum5 = findViewById(R.id.btnNum5)
-        btnNum6 = findViewById(R.id.btnNum6)
-        btnNum7 = findViewById(R.id.btnNum7)
-        btnNum8 = findViewById(R.id.btnNum8)
-        btnNum9 = findViewById(R.id.btnNum9)
         btnZero = findViewById(R.id.btnzero)
 
         cvSelected = a1
