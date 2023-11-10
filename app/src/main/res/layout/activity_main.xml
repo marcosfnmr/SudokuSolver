@@ -4,301 +4,327 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/colorFondo">
+    android:background="@color/colorFondo"
+    tools:context=".MainActivity">
+
     <androidx.cardview.widget.CardView
         android:id="@+id/crdGrid"
         android:layout_width="350dp"
         android:layout_height="350dp"
+        android:layout_marginTop="40dp"
         app:cardBackgroundColor="@color/colorGrid"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:rowCount="4"
-            android:columnCount="4">
+            android:columnCount="4"
+            android:rowCount="4">
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/a1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="0"
                 android:layout_column="0"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
 
                 <TextView
                     android:id="@+id/a1Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/a2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="0"
                 android:layout_column="1"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
 
                 <TextView
                     android:id="@+id/a2Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/a3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="0"
                 android:layout_column="2"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
 
                 <TextView
                     android:id="@+id/a3Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/a4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="0"
                 android:layout_column="3"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
 
                 <TextView
                     android:id="@+id/a4Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/b1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="1"
                 android:layout_column="0"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
 
                 <TextView
                     android:id="@+id/b1Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/b2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="1"
                 android:layout_column="1"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/b2Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/b3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="1"
                 android:layout_column="2"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/b3Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/b4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="1"
                 android:layout_column="3"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/b4Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/c1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="2"
                 android:layout_column="0"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/c1Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/c2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="2"
                 android:layout_column="1"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/c2Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/c3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="2"
                 android:layout_column="2"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/c3Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/c4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="2"
                 android:layout_column="3"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/c4Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/d1"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="3"
                 android:layout_column="0"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/d1Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/d2"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="3"
                 android:layout_column="1"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/d2Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/d3"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="3"
                 android:layout_column="2"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/d3Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/d4"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="3.75dp"
                 android:layout_row="3"
                 android:layout_column="3"
+                android:layout_margin="3.75dp"
                 app:cardBackgroundColor="@color/cuadradoGrid">
+
                 <TextView
                     android:id="@+id/d4Text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:gravity="center"
                     android:text=""
-                    tools:text="@string/one"
                     android:textSize="60sp"
-                    android:gravity="center"/>
+                    tools:text="@string/one" />
             </androidx.cardview.widget.CardView>
 
         </GridLayout>
@@ -319,105 +345,114 @@
         android:id="@+id/gridNums"
         android:layout_width="218.75dp"
         android:layout_height="218.75dp"
-        app:layout_constraintTop_toBottomOf="@+id/crdGrid"
-        app:layout_constraintStart_toStartOf="@+id/crdGrid"
         android:layout_marginTop="20dp"
+        android:columnCount="3"
         android:rowCount="3"
-        android:columnCount="3">
+        app:layout_constraintStart_toStartOf="@+id/crdGrid"
+        app:layout_constraintTop_toBottomOf="@+id/crdGrid">
 
         <Button
             android:id="@+id/btnNum1"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/one"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="0"
-            android:layout_column="0"/>
+            android:layout_column="0"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/one"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum2"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/two"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="0"
-            android:layout_column="1"/>
+            android:layout_column="1"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/two"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum3"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/three"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="0"
-            android:layout_column="2"/>
+            android:layout_column="2"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/three"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum4"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/four"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="1"
-            android:layout_column="0"/>
+            android:layout_column="0"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/four"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum5"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/five"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="1"
-            android:layout_column="01"/>
+            android:layout_column="01"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/five"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum6"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/six"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="1"
-            android:layout_column="2"/>
+            android:layout_column="2"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/six"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum7"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/seven"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="2"
-            android:layout_column="0"/>
+            android:layout_column="0"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/seven"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum8"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/eight"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="2"
-            android:layout_column="1"/>
+            android:layout_column="1"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/eight"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/btnNum9"
             android:layout_width="72.91dp"
             android:layout_height="72.91dp"
-            android:text="@string/nine"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/colorSelected"
             android:layout_row="2"
-            android:layout_column="2"/>
+            android:layout_column="2"
+            android:backgroundTint="@color/colorSelected"
+            android:text="@string/nine"
+            android:textColor="@color/white" />
 
 
     </GridLayout>
+
     <Button
         android:id="@+id/btnzero"
         android:layout_width="wrap_content"
         android:layout_height="72.91dp"
-        app:layout_constraintBottom_toBottomOf="@id/gridNums"
-        app:layout_constraintEnd_toEndOf="@id/crdGrid"
-        app:layout_constraintStart_toEndOf="@id/gridNums"
+        android:backgroundTint="@color/colorSelected"
         android:text="@string/zero"
         android:textColor="@color/white"
-        android:backgroundTint="@color/colorSelected"/>
+        app:layout_constraintBottom_toBottomOf="@id/gridNums"
+        app:layout_constraintEnd_toEndOf="@id/crdGrid"
+        app:layout_constraintStart_toEndOf="@id/gridNums" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

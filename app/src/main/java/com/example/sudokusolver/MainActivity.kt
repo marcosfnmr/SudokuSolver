@@ -10,6 +10,7 @@ import androidx.cardview.widget.CardView
 
 private lateinit var cvSelected: CardView
 private lateinit var tvSelected: TextView
+
 /**
  *  CADA UNO DE LOS CUADRADOS DEL SUDOKU
  */
@@ -45,7 +46,6 @@ private lateinit var btnNum9: Button
 private lateinit var btnZero: Button
 
 
-
 /**
  *  TEXTVIEW DE CADA CUADRADO
  */
@@ -67,7 +67,6 @@ private lateinit var d3Text: TextView
 private lateinit var d4Text: TextView
 
 
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,116 +76,116 @@ class MainActivity : AppCompatActivity() {
         initListeners()
     }
 
-    private fun initListeners(){
-        a1.setOnClickListener{
+    private fun initListeners() {
+        a1.setOnClickListener {
             cardDeselector()
             selectSquare(a1, a1Text)
         }
-        a2.setOnClickListener{
+        a2.setOnClickListener {
             cardDeselector()
             selectSquare(a2, a2Text)
         }
-        a3.setOnClickListener{
+        a3.setOnClickListener {
             cardDeselector()
             selectSquare(a3, a3Text)
         }
-        a4.setOnClickListener{
+        a4.setOnClickListener {
             cardDeselector()
             selectSquare(a4, a4Text)
         }
-        b1.setOnClickListener{
+        b1.setOnClickListener {
             cardDeselector()
             selectSquare(b1, b1Text)
         }
-        b2.setOnClickListener{
+        b2.setOnClickListener {
             cardDeselector()
             selectSquare(b2, b2Text)
         }
-        b3.setOnClickListener{
+        b3.setOnClickListener {
             cardDeselector()
             selectSquare(b3, b3Text)
         }
-        b4.setOnClickListener{
+        b4.setOnClickListener {
             cardDeselector()
             selectSquare(b4, b4Text)
         }
-        c1.setOnClickListener{
+        c1.setOnClickListener {
             cardDeselector()
             selectSquare(c1, c1Text)
         }
-        c2.setOnClickListener{
+        c2.setOnClickListener {
             cardDeselector()
             selectSquare(c2, c2Text)
         }
-        c3.setOnClickListener{
+        c3.setOnClickListener {
             cardDeselector()
             selectSquare(c3, c3Text)
         }
-        c4.setOnClickListener{
+        c4.setOnClickListener {
             cardDeselector()
             selectSquare(c4, c4Text)
         }
-        d1.setOnClickListener{
+        d1.setOnClickListener {
             cardDeselector()
             selectSquare(d1, d1Text)
         }
-        d2.setOnClickListener{
+        d2.setOnClickListener {
             cardDeselector()
             selectSquare(d2, d2Text)
         }
-        d3.setOnClickListener{
+        d3.setOnClickListener {
             cardDeselector()
             selectSquare(d3, d3Text)
         }
-        d4.setOnClickListener{
+        d4.setOnClickListener {
             cardDeselector()
             selectSquare(d4, d4Text)
         }
 
-        btnNum1.setOnClickListener{
+        btnNum1.setOnClickListener {
             tvSelected!!.text = btnNum1.text.toString()
             cardDeselector()
         }
-        btnNum2.setOnClickListener{
+        btnNum2.setOnClickListener {
             tvSelected!!.text = btnNum2.text.toString()
             cardDeselector()
         }
-        btnNum3.setOnClickListener{
+        btnNum3.setOnClickListener {
             tvSelected!!.text = btnNum3.text.toString()
             cardDeselector()
         }
-        btnNum4.setOnClickListener{
+        btnNum4.setOnClickListener {
             tvSelected!!.text = btnNum4.text.toString()
             cardDeselector()
         }
-        btnNum5.setOnClickListener{
+        btnNum5.setOnClickListener {
             tvSelected!!.text = btnNum5.text.toString()
             cardDeselector()
         }
-        btnNum6.setOnClickListener{
+        btnNum6.setOnClickListener {
             tvSelected!!.text = btnNum6.text.toString()
             cardDeselector()
         }
-        btnNum7.setOnClickListener{
+        btnNum7.setOnClickListener {
             tvSelected!!.text = btnNum7.text.toString()
             cardDeselector()
         }
-        btnNum8.setOnClickListener{
+        btnNum8.setOnClickListener {
             tvSelected!!.text = btnNum8.text.toString()
             cardDeselector()
         }
-        btnNum9.setOnClickListener{
+        btnNum9.setOnClickListener {
             tvSelected!!.text = btnNum9.text.toString()
             cardDeselector()
         }
-        btnZero.setOnClickListener{
+        btnZero.setOnClickListener {
             tvSelected!!.text = ""
             cardDeselector()
         }
 
     }
 
-    private fun initComponents(){
+    private fun initComponents() {
 
 
         // CARDVIEWS
@@ -245,7 +244,7 @@ class MainActivity : AppCompatActivity() {
      * Selecciona un cuadrado del sudoku
      * @param cv cuadrado a seleccionar
      */
-    private fun selectSquare(cv: CardView, tv: TextView){
+    private fun selectSquare(cv: CardView, tv: TextView) {
         //Cambio el color a seleccionado
         cv.setCardBackgroundColor(getColor(R.color.colorSelected))
         cvSelected = cv
@@ -255,7 +254,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * Elimina la selección de todos los cuadrados y devuelve el color de fondo
      */
-    private fun cardDeselector(){
+    private fun cardDeselector() {
         a1.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
         a2.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
         a3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
@@ -282,11 +281,11 @@ class MainActivity : AppCompatActivity() {
      * @param num numero a comprobar
      * @return true: Si es un numero, false: si no es un número
      */
-    private fun isValid(num:String): Boolean{
-        return try{
+    private fun isValid(num: String): Boolean {
+        return try {
             num.toDouble()
             true
-        }catch (e: NumberFormatException){
+        } catch (e: NumberFormatException) {
             false
         }
     }
