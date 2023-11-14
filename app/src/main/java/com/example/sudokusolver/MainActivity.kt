@@ -6,10 +6,16 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import com.example.sudokusolver.Sudoku
+
 
 
 private lateinit var cvSelected: CardView
 private lateinit var tvSelected: TextView
+
+private lateinit var btnSolve: Button
+private lateinit var sudoku: Sudoku
+private lateinit var listaNums: Array<Int>
 
 /**
  *  CADA UNO DE LOS CUADRADOS DEL SUDOKU
@@ -158,6 +164,13 @@ class MainActivity : AppCompatActivity() {
             cardDeselector()
         }
 
+        btnSolve.setOnClickListener{
+            // Carga los numeros en el array
+            addArray()
+            // Añade los numeros al array
+            setSudoku()
+        }
+
     }
 
     private fun initComponents() {
@@ -208,6 +221,7 @@ class MainActivity : AppCompatActivity() {
 
         cvSelected = a1
         tvSelected = a1Text
+        btnSolve = findViewById(R.id.btnSolve)
     }
 
     /**
@@ -243,20 +257,25 @@ class MainActivity : AppCompatActivity() {
         c3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
         c4.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
     }
-
-    /**
-     * Método al que si se le pasa una string, en caso de ser número devuelve true, en caso contrario
-     * maneja la excepción y devuelve false.
-     *
-     * @param num numero a comprobar
-     * @return true: Si es un numero, false: si no es un número
-     */
-    private fun isValid(num: String): Boolean {
-        return try {
-            num.toDouble()
-            true
-        } catch (e: NumberFormatException) {
-            false
+    private fun addArray(){
+        listaNums = arrayOf(a1Text.toString().toInt(), a2Text.toString().toInt(), a3Text.toString().toInt(), a4Text.toString().toInt(),
+                            b1Text.toString().toInt(), b2Text.toString().toInt(), b3Text.toString().toInt(), b4Text.toString().toInt(),
+                            c1Text.toString().toInt(), c2Text.toString().toInt(), c3Text.toString().toInt(), c4Text.toString().toInt(),
+                            d1Text.toString().toInt(), d2Text.toString().toInt(), d3Text.toString().toInt(), d4Text.toString().toInt())
+    }
+    private fun setSudoku(){
+        var n=0
+        for (i in 0..4){
+            for(j in 0..4){
+                // Añade el numero y si es un blanco añade un 0
+                if(listaNums[n]==1 || listaNums[n]==2 || listaNums[n]==3 || listaNums[n]==4) {
+                    sudoku.setSudokuNum(i, j, listaNums[n])
+                    n++
+                }else{
+                    sudoku.setSudokuNum(i, j, 0)
+                }
+            }
         }
     }
+
 }

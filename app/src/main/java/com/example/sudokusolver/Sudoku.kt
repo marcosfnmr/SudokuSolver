@@ -34,8 +34,27 @@ class Sudoku(val matriz: Array<Array<Int>>) {
     /**
      * Comprueba que la matriz no tenga numeros repetidos en cada uno de los 4 cuadrantes
      */
-    private fun noRepiteCuadrante(matriz3D: Array<Array<IntArray>>) {
+    private fun noRepiteCuadrante(matriz3D: Array<Array<IntArray>>): Boolean {
+        var a = 0
+        var b = 0
+        var c = 0
+        var d = 0
+        //Itero sobre los distintos cuadrantes
+        for (k in 0..3) {
 
+            for (i in 0..1) {
+                for (j in 0..1) {
+                    when (matriz3D[i][j][k]) {
+                        1 -> a++
+                        2 -> b++
+                        3 -> c++
+                        4 -> d++
+                    }
+                    if (a == 2 || b == 2 || c == 2 || d == 2) return true
+                }
+            }
+        }
+        return false
     }
 
     /**
@@ -43,7 +62,7 @@ class Sudoku(val matriz: Array<Array<Int>>) {
      * de modo que para cambiar entre cuadrantes solamente habra que incrementar o decrementar "k"
      * @return arrayTridim array tridimensional con el mismo contenido de la matriz original
      */
-    private fun separaCuadrantes(): Array<Array<IntArray>>{
+    private fun separaCuadrantes(): Array<Array<IntArray>> {
         // Creo un array tridimensional
         val arrayTridim = Array(2) { Array(2) { IntArray(2) } }
 
