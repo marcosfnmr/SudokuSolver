@@ -84,4 +84,8 @@ class Sudoku(val matriz: Array<Array<Int>>) {
         return arrayTridim
     }
 
+    public fun printSudoku(){
+        //TODO Crear metodo que imprima un sudoku en el logCat o terminal para poder debugear y ver si el progrma funcionacorectamente
+    }
+
 }

@@ -257,12 +257,20 @@ class MainActivity : AppCompatActivity() {
         c3.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
         c4.setCardBackgroundColor(getColor(R.color.cuadradoGrid))
     }
+
+    /**
+     * Función que añade todos los numeros de las  textview a un array para insertarlo posteriormente al objeto sudoku
+     */
     private fun addArray(){
         listaNums = arrayOf(a1Text.toString().toInt(), a2Text.toString().toInt(), a3Text.toString().toInt(), a4Text.toString().toInt(),
                             b1Text.toString().toInt(), b2Text.toString().toInt(), b3Text.toString().toInt(), b4Text.toString().toInt(),
                             c1Text.toString().toInt(), c2Text.toString().toInt(), c3Text.toString().toInt(), c4Text.toString().toInt(),
                             d1Text.toString().toInt(), d2Text.toString().toInt(), d3Text.toString().toInt(), d4Text.toString().toInt())
     }
+
+    /**
+     * Función que va añadiendo los numeros al objeto sudoku
+     */
     private fun setSudoku(){
         var n=0
         for (i in 0..4){
