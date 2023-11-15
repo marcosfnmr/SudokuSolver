@@ -1,11 +1,13 @@
 package com.example.sudokusolver
 
+import android.util.Log
+
 /**
  * En esta clase se supondra que el tamaño de la matriz es de 4x4 y no cambiara nunca
  */
 var dim = 4
 var dim2 = 2
-
+val matrizVacia: Array<Array<Int>> = Array(4){Array(4){0}}
 class Sudoku(val matriz: Array<Array<Int>>) {
     /**
      * Introduce un numero dentro de su posicion de la matriz
@@ -14,8 +16,10 @@ class Sudoku(val matriz: Array<Array<Int>>) {
         matriz[fila][columna] = num
     }
 
+    constructor() :this(matrizVacia)
+
     /**
-     * Comprueba que la matriz no repite nuemro en las filas ni columnas
+     * Comprueba que la matriz no repite numero en las filas ni columnas
      * @param fila en la que se encuentra num
      * @param columna en la que se encuentra num
      * @param dimension dimension de la matriz, puede ser 2 o 4
@@ -85,7 +89,16 @@ class Sudoku(val matriz: Array<Array<Int>>) {
     }
 
     public fun printSudoku(){
+
         //TODO Crear metodo que imprima un sudoku en el logCat o terminal para poder debugear y ver si el progrma funcionacorectamente
+        for(i in 0..<dim){
+            for (j in 0..<dim){
+                Log.d("MarcosMatriz", matriz[i][j].toString())
+            }
+
+            Log.d("MarcosDebug", "Cambio Linea")
+
+        }
     }
 
 }

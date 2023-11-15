@@ -2,6 +2,7 @@ package com.example.sudokusolver
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -16,6 +17,7 @@ private lateinit var tvSelected: TextView
 private lateinit var btnSolve: Button
 private lateinit var sudoku: Sudoku
 private lateinit var listaNums: Array<Int>
+private lateinit var listaNumsString:Array<String>
 
 /**
  *  CADA UNO DE LOS CUADRADOS DEL SUDOKU
@@ -168,7 +170,9 @@ class MainActivity : AppCompatActivity() {
             // Carga los numeros en el array
             addArray()
             // Añade los numeros al array
+            sudoku = Sudoku()
             setSudoku()
+            sudoku.printSudoku()
         }
 
     }
@@ -262,10 +266,11 @@ class MainActivity : AppCompatActivity() {
      * Función que añade todos los numeros de las  textview a un array para insertarlo posteriormente al objeto sudoku
      */
     private fun addArray(){
-        listaNums = arrayOf(a1Text.toString().toInt(), a2Text.toString().toInt(), a3Text.toString().toInt(), a4Text.toString().toInt(),
-                            b1Text.toString().toInt(), b2Text.toString().toInt(), b3Text.toString().toInt(), b4Text.toString().toInt(),
-                            c1Text.toString().toInt(), c2Text.toString().toInt(), c3Text.toString().toInt(), c4Text.toString().toInt(),
-                            d1Text.toString().toInt(), d2Text.toString().toInt(), d3Text.toString().toInt(), d4Text.toString().toInt())
+        listaNumsString = arrayOf(a1Text.text.toString(), a2Text.text.toString(), a3Text.text.toString(), a4Text.text.toString(),
+                                    b1Text.text.toString(), b2Text.text.toString(), b3Text.text.toString(), b4Text.text.toString(),
+                                    c1Text.text.toString(), c2Text.text.toString(), c3Text.text.toString(), c4Text.text.toString(),
+                                    d1Text.text.toString(), d2Text.text.toString(), d3Text.text.toString(), d4Text.text.toString())
+
     }
 
     /**
@@ -273,17 +278,25 @@ class MainActivity : AppCompatActivity() {
      */
     private fun setSudoku(){
         var n=0
-        for (i in 0..4){
-            for(j in 0..4){
+        var k=0
+        for (i in 0..3){
+            for(j in 0..3){
                 // Añade el numero y si es un blanco añade un 0
-                if(listaNums[n]==1 || listaNums[n]==2 || listaNums[n]==3 || listaNums[n]==4) {
-                    sudoku.setSudokuNum(i, j, listaNums[n])
-                    n++
-                }else{
-                    sudoku.setSudokuNum(i, j, 0)
-                }
+                    if(isValid(listaNumsString[k])){
+                        sudoku.setSudokuNum(i, j, listaNumsString[k].toInt())
+                    }else{
+                        sudoku.setSudokuNum(i, j, 0)
+                    }
+                k++
             }
         }
     }
-
+    private fun isValid(num:String): Boolean{
+        return try{
+            num.toDouble()
+            true
+        }catch (e: NumberFormatException){
+            false
+        }
+    }
 }
