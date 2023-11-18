@@ -38,24 +38,14 @@ class Sudoku(val matriz: Array<Array<Int>>) {
     /**
      * Comprueba que la matriz no tenga numeros repetidos en cada uno de los 4 cuadrantes
      */
-    private fun noRepiteCuadrante(matriz3D: Array<Array<IntArray>>): Boolean {
-        var a = 0
-        var b = 0
-        var c = 0
-        var d = 0
-        //Itero sobre los distintos cuadrantes
-        for (k in 0..3) {
+    private fun RepiteCuadrante(matriz3D: Array<Array<IntArray>>): Boolean {
 
-            for (i in 0..1) {
-                for (j in 0..1) {
-                    when (matriz3D[i][j][k]) {
-                        1 -> a++
-                        2 -> b++
-                        3 -> c++
-                        4 -> d++
-                    }
-                    if (a == 2 || b == 2 || c == 2 || d == 2) return true
-                }
+        //Itero sobre los distintos cuadrantes
+
+        //TODO Arreglar esto que no funciona. Descubrir como funcionan las matrices tridimensionales
+        for (i in matriz3D.indices) {
+            for (j in 0..1) {
+                if (matriz3D[i][j].size!= matriz3D[i][j].distinct().size) return true
             }
         }
         return false
@@ -68,7 +58,7 @@ class Sudoku(val matriz: Array<Array<Int>>) {
      */
     private fun separaCuadrantes(): Array<Array<IntArray>> {
         // Creo un array tridimensional
-        val arrayTridim = Array(2) { Array(2) { IntArray(2) } }
+        val arrayTridim = Array(2) { Array(2) { IntArray(4) } }
 
         for (i in 0..1) {
             for (j in 0..1) {
@@ -88,16 +78,20 @@ class Sudoku(val matriz: Array<Array<Int>>) {
         return arrayTridim
     }
 
+    /**
+     * Imprime en la terminal la matriz
+     */
     public fun printSudoku(){
-
-        //TODO Crear metodo que imprima un sudoku en el logCat o terminal para poder debugear y ver si el progrma funcionacorectamente
         for(i in 0..<dim){
             for (j in 0..<dim){
-                Log.d("MarcosMatriz", matriz[i][j].toString())
+                print(matriz[i][j].toString()+ " ")
             }
-
-            Log.d("MarcosDebug", "Cambio Linea")
-
+            println("")
+        }
+        if(!RepiteCuadrante(separaCuadrantes())){
+            print("Los cuadrantes estan bien\n")
+        }else{
+            print("Los cuadrantes estan mal\n")
         }
     }
 
